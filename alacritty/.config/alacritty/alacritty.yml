@@ -1,0 +1,17 @@
+window:
+  padding:
+    x: 5
+    y: 5
+
+font:
+  size: 14
+
+  normal:
+    family: "Iosevka"
+    style: Regular
+  bold:
+    family: "Iosevka"
+    style: Bold
+
+shell:
+  program: /usr/bin/fish
