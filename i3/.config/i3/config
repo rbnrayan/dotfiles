@@ -128,7 +128,7 @@ bindsym $mod+x 			            exec --no-startup-id $reboot
 bindsym $mod+Shift+x		        exec --no-startup-id $shutdown
 
 # p
-bindsym $mod+p			            exec --no-startup-id picom -b --config=$HOME/.config/picom/picom.conf
+bindsym $mod+p			            exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
 bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 
 # v
@@ -247,3 +247,4 @@ client.background       #ffffff
 
 # Setting the background
 exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_unsplash27.png
+exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
