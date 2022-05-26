@@ -3,6 +3,10 @@ window:
     x: 5
     y: 5
 
+colors:
+  primary:
+    background: '#141414'
+
 font:
   size: 14
 
