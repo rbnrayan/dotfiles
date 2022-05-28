@@ -135,7 +135,7 @@ bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 # bindsym $mod+v			            exec --no-startup-id mpv /dev/video0
 
 # b
-bindsym $mod+b			            exec --no-startup-id firefox
+bindsym $mod+b			            exec --no-startup-id brave
 
 # n
 # bindsym $mod+n			            exec --no-startup-id neovide
@@ -230,6 +230,9 @@ bindsym $mod+Ctrl+Right		move workspace to output left
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym XF86AudioNext        exec --no-startup-id playerctl --player=spotify next
+bindsym XF86AudioPrev        exec --no-startup-id playerctl --player=spotify previous
+bindsym XF86AudioPlay        exec --no-startup-id playerctl --player=spotify play-pause
 
 # Window borders
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
