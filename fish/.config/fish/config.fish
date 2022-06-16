@@ -4,4 +4,4 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 
 fish_add_path /home/rayan/.local/bin
 
-alias nvim=nvim.appimage
+# alias nvim=nvim.appimage

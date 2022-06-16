@@ -66,7 +66,7 @@ bindsym $mod+t 			            exec $term -e ytop
 bindsym $mod+Shift+t            focus mode_toggle
 
 # y
-bindsym $mod+y			            exec --no-startup-id flameshot gui -p ~/Pictures/screenshots
+bindsym $mod+y			            exec --no-startup-id scrot -s ~/Pictures/screenshots
 bindsym $mod+Shift+y		        exec --no-startup-id flameshot full -p ~/Pictures/screenshots
 
 # u
@@ -135,7 +135,7 @@ bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 # bindsym $mod+v			            exec --no-startup-id mpv /dev/video0
 
 # b
-bindsym $mod+b			            exec --no-startup-id brave
+bindsym $mod+b			            exec --no-startup-id chromium
 
 # n
 # bindsym $mod+n			            exec --no-startup-id neovide
@@ -249,5 +249,5 @@ client.background       #ffffff
 # }
 
 # Setting the background
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_unsplash27.png
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_unsplash3.png
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
