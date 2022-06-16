@@ -16,16 +16,14 @@ font:
   normal:
     family: "MesloLGSDZ Nerd Font"
     style: Regular
-    antialias: true
   bold:
     family: "MesloLGSDZ Nerd Font"
     style: Bold
-    antialias: true
 
 cursor:
   style: Beam
 
-    # shell:
-    #   program: /usr/bin/fish
+shell:
+  program: /usr/bin/fish
 
 live_config_reload: true
