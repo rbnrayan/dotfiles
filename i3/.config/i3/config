@@ -24,7 +24,7 @@ set $hibernate sudo -A systemctl hibernate
 floating_modifier $mod
 
 # #---Gaps---# #
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps inner $inner_gaps
 gaps outer $outer_gaps
 
@@ -150,8 +150,8 @@ bindsym $mod+b			            exec --no-startup-id chromium
 # bindsym $mod+Tab		            exec --no-startup-id rofi-menu-windows
 bindsym $mod+Tab		          workspace next
 bindsym $mod+Shift+Tab		      workspace previous
-bindsym $mod+apostrophe		      split horizontal ;; exec $term
-bindsym $mod+slash		          split vertical ;; exec $term
+#bindsym $mod+apostrophe		      split horizontal ;; exec $term
+#bindsym $mod+slash		          split vertical ;; exec $term
 bindsym $mod+Shift+slash	      kill
 bindsym $mod+backslash		      workspace back_and_forth
 
@@ -170,8 +170,8 @@ set $ws10 "10"
 # assign [class="Brave"] $ws1
 # assign [class="Chromium"] $ws2
 assign [class="discord"] $ws8
+for_window [class="Steam"] move to workspace $ws7
 for_window [class="Spotify"] move to workspace $ws9
-assign [class="obs"] $ws10
 
 # Assigning autofloat
 for_window [title=".*Emulator.*"] floating enable
@@ -249,5 +249,5 @@ client.background       #ffffff
 # }
 
 # Setting the background
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_unsplash3.png
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/AnymzpF.jpg
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf

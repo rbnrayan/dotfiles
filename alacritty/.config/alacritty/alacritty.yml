@@ -1,14 +1,11 @@
-# import:
-#   - ~/.config/alacritty/zenbones-light.yml
+import:
+  - ~/.config/alacritty/everforest.yml
+# - ~/.config/alacritty/zenbones-light.yml
 
 window:
   padding:
     x: 5
     y: 5
-
-colors:
-  primary:
-    background: '#141414'
 
 font:
   size: 12
