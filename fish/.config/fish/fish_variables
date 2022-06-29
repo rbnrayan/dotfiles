@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export GITHUB_TOKEN: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
+SETUVAR --export GITHUB_TOKEN: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
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr

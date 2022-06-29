@@ -249,5 +249,5 @@ client.background       #ffffff
 # }
 
 # Setting the background
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/AnymzpF.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_waifu.png
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
