@@ -1,5 +1,6 @@
-import:
-  - ~/.config/alacritty/everforest.yml
+# import:
+# - ~/.config/alacritty/everforest.yml
+# - ~/.config/alacritty/dark_plus.yml
 # - ~/.config/alacritty/zenbones-light.yml
 
 window:
@@ -11,10 +12,10 @@ font:
   size: 11
 
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: Hack Nerd Font
     style: Regular
   bold:
-    family: "JetBrainsMono Nerd Font"
+    family: Hack Nerd Font
     style: Bold
 
 cursor:
