@@ -1,4 +1,5 @@
-# import:
+import:
+  - ~/.config/alacritty/gruvbox.yml
 # - ~/.config/alacritty/everforest.yml
 # - ~/.config/alacritty/dark_plus.yml
 # - ~/.config/alacritty/zenbones-light.yml
