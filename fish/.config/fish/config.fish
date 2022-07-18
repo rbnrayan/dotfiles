@@ -5,15 +5,8 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 # --- Valgrind --- #
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
-# --- Ruby --- #
-set GEM_HOME $(ruby -e "puts Gem.user_dir")
-fish_add_path $GEM_HOME
-
 # --- path --- #
 fish_add_path /home/rayan/.local/bin
-
-# --- aliases --- #
-# alias nvim=nvim.appimage
 
 # --- function wrapper --- #
 function tmux

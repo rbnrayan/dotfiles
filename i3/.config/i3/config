@@ -4,6 +4,8 @@
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
+# exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_waifu.png
+exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
 
 
 # #---Basic Definitions---# #
@@ -87,8 +89,8 @@ bindsym $mod+s        			    sticky toggle;
 bindsym $mod+Shift+s			      split toggle
 
 # d
-# bindsym $mod+d                  exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i'
-bindsym $mod+d                  exec --no-startup-id dmenu_run -h 28 -fn "Iosevka-12"
+bindsym $mod+d                  exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i'
+# bindsym $mod+d                  exec --no-startup-id dmenu_run -h 28 -fn "Iosevka-12"
 
 # f
 bindsym $mod+f			            fullscreen toggle
@@ -248,6 +250,3 @@ client.background       #ffffff
 #   status_command i3status
 # }
 
-# Setting the background
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_waifu.png
-exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
