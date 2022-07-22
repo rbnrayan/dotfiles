@@ -88,7 +88,7 @@ bindsym $mod+Shift+s			      split toggle
 
 # d
 # bindsym $mod+d                  exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i'
-bindsym $mod+d                  exec --no-startup-id dmenu_run -h 28 -fn "Iosevka-12"
+bindsym $mod+d                  exec --no-startup-id dmenu_run -b -h 28 -fn "Iosevka-12"
 
 # f
 bindsym $mod+f			            fullscreen toggle
@@ -249,5 +249,5 @@ client.background       #ffffff
 # }
 
 # Setting the background
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_waifu.png
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/fullmetal_alchemist.jpeg
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
