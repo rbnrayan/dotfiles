@@ -4,8 +4,12 @@
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
-# exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/ign_waifu.png
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/fullmetal_alchemist.jpeg
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
+
+# Touchpad tap to click
+# xinput set-prop <device> <option> <value>
+exec xinput set-prop "SYNA32AA:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 1
 
 
 # #---Basic Definitions---# #
@@ -236,8 +240,13 @@ bindsym XF86AudioNext        exec --no-startup-id playerctl --player=spotify nex
 bindsym XF86AudioPrev        exec --no-startup-id playerctl --player=spotify previous
 bindsym XF86AudioPlay        exec --no-startup-id playerctl --player=spotify play-pause
 
+# Brightness controls
+ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 4%-
+ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 4%+
+
 # Window borders
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
+# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
+client.focused          #4c7899 #285577 #ffffff #ffffff   #abb2bf
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
