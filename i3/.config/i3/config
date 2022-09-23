@@ -11,6 +11,8 @@ exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
 # xinput set-prop <device> <option> <value>
 exec xinput set-prop "SYNA32AA:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 1
 
+default_border none
+for_window [class="^.*"] border pixel 0
 
 # #---Basic Definitions---# #
 # smart_gaps on
@@ -30,7 +32,6 @@ set $hibernate sudo -A systemctl hibernate
 floating_modifier $mod
 
 # #---Gaps---# #
-for_window [class="^.*"] border pixel 1
 gaps inner $inner_gaps
 gaps outer $outer_gaps
 
