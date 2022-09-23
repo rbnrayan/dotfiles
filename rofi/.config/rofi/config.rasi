@@ -1,0 +1,5 @@
+configuration {
+  modi: "run, window";
+  font: "Roboto 12";
+}
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

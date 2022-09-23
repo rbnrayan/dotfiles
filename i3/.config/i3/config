@@ -4,7 +4,7 @@
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/fullmetal_alchemist.jpeg
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/white_wallpaper1.jpg
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
 
 # Touchpad tap to click
@@ -15,9 +15,9 @@ exec xinput set-prop "SYNA32AA:00 06CB:CE17 Touchpad" "libinput Tapping Enabled"
 # #---Basic Definitions---# #
 # smart_gaps on
 smart_borders on
-set $inner_gaps 10
+set $inner_gaps 8
 set $outer_gaps 0
-set $term --no-startup-id alacritty
+set $term --no-startup-id kitty
 set $mod Mod4
 set $alt Mod1
 set $shutdown sudo -A shutdown -h now
@@ -93,8 +93,7 @@ bindsym $mod+s        			    sticky toggle;
 bindsym $mod+Shift+s			      split toggle
 
 # d
-bindsym $mod+d                  exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i'
-# bindsym $mod+d                  exec --no-startup-id dmenu_run -h 28 -fn "Iosevka-12"
+bindsym $mod+d                  exec --no-startup-id rofi -modi drun#run#window -show drun
 
 # f
 bindsym $mod+f			            fullscreen toggle
@@ -179,8 +178,12 @@ assign [class="discord"] $ws8
 for_window [class="Steam"] move to workspace $ws7
 for_window [class="Spotify"] move to workspace $ws9
 
+for_window [window_role="GtkFileChooserDialog"] resize set 800 600
+for_window [window_role="GtkFileChooserDialog"] move position center
+
 # Assigning autofloat
 for_window [title=".*Emulator.*"] floating enable
+for_window [class="jetbrains-.*" title="splash"] floating enable
 
 # switch to workspace
 bindsym $mod+1		workspace $ws1
@@ -206,11 +209,6 @@ bindsym $mod+Shift+8	move container to workspace $ws8
 bindsym $mod+Shift+9	move container to workspace $ws9
 bindsym $mod+Shift+0	move container to workspace $ws10
 
-for_window [title="GIMP Startup"] move workspace $ws5
-for_window [class="Gimp"] move workspace $ws5
-for_window [window_role="GtkFileChooserDialog"] resize set 800 600
-for_window [window_role="GtkFileChooserDialog"] move position center
-
 
 # #---Function Buttons---# #
 bindsym $mod+F1		        restart
@@ -220,7 +218,7 @@ bindsym $mod+F12	        exec $term -e nmtui
 
 # #---Arrow Keys---# #
 bindsym $mod+Left		      focus left
-bindsym $mod+Shift+Right   resize shrink width 5 px or 5 ppt
+bindsym $mod+Shift+Right  resize shrink width 5 px or 5 ppt
 bindsym $mod+Ctrl+Left		move workspace to output right
 bindsym $mod+Down		      focus down
 bindsym $mod+Shift+Down   resize shrink height 5 px or 5 ppt
@@ -229,7 +227,7 @@ bindsym $mod+Up			      focus up
 bindsym $mod+Shift+Up     resize grow height 5 px or 5 ppt
 bindsym $mod+Ctrl+Up		  move workspace to output down
 bindsym $mod+Right 		    focus right
-bindsym $mod+Shift+Left  resize grow width 5 px or 5 ppt
+bindsym $mod+Shift+Left   resize grow width 5 px or 5 ppt
 bindsym $mod+Ctrl+Right		move workspace to output left
 
 # Pulse Audio controls
@@ -242,12 +240,12 @@ bindsym XF86AudioPlay        exec --no-startup-id playerctl --player=spotify pla
 
 # Brightness controls
  bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 4%-
- bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 4%+
+ bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl -q set 4%+
 
 # Window borders
-# client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
-client.focused          #4c7899 #285577 #ffffff #ffffff   #abb2bf
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #000000   #000000
+client.focused_inactive #333333 #5f676a #ffffff #a9a9a9   #a9a9a9
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
