@@ -37,7 +37,7 @@ gaps outer $outer_gaps
 
 # #---Basic Bindings---# #
 bindsym $mod+Return 		         exec $term
-bindsym $mod+Shift+Return	       exec $term --working-directory  $(xcwd)
+bindsym $mod+Shift+Return	       exec $term --working-directory $(xcwd)
 
 bindsym $mod+Escape	             exec --no-startup-id dm-tool switch-to-greeter
 bindsym $mod+Shift+Escape	       exec --no-startup-id $hibernate
@@ -73,8 +73,8 @@ bindsym $mod+t 			            exec $term -e ytop
 bindsym $mod+Shift+t            focus mode_toggle
 
 # y
-bindsym $mod+y			            exec --no-startup-id scrot -s ~/Pictures/screenshots
-bindsym $mod+Shift+y		        exec --no-startup-id flameshot full -p ~/Pictures/screenshots
+bindsym $mod+y			            exec --no-startup-id flameshot gui
+bindsym $mod+Shift+y		        exec --no-startup-id flameshot full
 
 # u
 bindsym $mod+u                  [urgent=latest] focus
@@ -141,7 +141,7 @@ bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 # bindsym $mod+v			            exec --no-startup-id mpv /dev/video0
 
 # b
-bindsym $mod+b			            exec --no-startup-id chromium
+bindsym $mod+b			            exec --no-startup-id firefox
 
 # n
 # bindsym $mod+n			            exec --no-startup-id neovide
@@ -154,9 +154,9 @@ bindsym $mod+b			            exec --no-startup-id chromium
 
 # #---Workspace Bindings---# #
 # bindsym $mod+Tab		            exec --no-startup-id rofi-menu-windows
-bindsym $mod+Tab		          workspace next
+bindsym $mod+Tab		            workspace next
 bindsym $mod+Shift+Tab		      workspace previous
-#bindsym $mod+apostrophe		      split horizontal ;; exec $term
+#bindsym $mod+apostrophe		    split horizontal ;; exec $term
 #bindsym $mod+slash		          split vertical ;; exec $term
 bindsym $mod+Shift+slash	      kill
 bindsym $mod+backslash		      workspace back_and_forth
@@ -254,7 +254,7 @@ client.background       #ffffff
 
 # #---Status Bar---# #
 # bar {
-#   position top
+#   position bottom
 #   status_command i3status
 # }
 
