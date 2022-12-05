@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DOCKER_HOST:unix\x3a///run/user/1000/docker\x2esock
 SETUVAR --export GITHUB_TOKEN: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
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_initialized:3400
