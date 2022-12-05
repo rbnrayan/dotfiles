@@ -1,28 +1,18 @@
 import:
-  - ~/.config/alacritty/gruvbox.yml
-# - ~/.config/alacritty/everforest.yml
-# - ~/.config/alacritty/dark_plus.yml
-# - ~/.config/alacritty/zenbones-light.yml
+  - ~/.config/alacritty/tokyonight_night.yml
 
 window:
   padding:
     x: 5
-    y: 5
+    y: 4
 
 font:
-  size: 8
-
   normal:
-    family: RobotoMono Nerd Font
-    style: Regular
-  bold:
-    family: RobotoMono Nerd Font
-    style: Bold
-
-cursor:
-  style: Beam
+    family: Jetbrains Mono
+  
+  size: 7.0
 
 shell:
-  program: /usr/bin/fish
+  program: /bin/fish
 
 live_config_reload: true
