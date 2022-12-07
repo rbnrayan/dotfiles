@@ -17,7 +17,7 @@ for_window [class="^.*"] border pixel 0
 # #---Basic Definitions---# #
 # smart_gaps on
 smart_borders on
-set $inner_gaps 8
+set $inner_gaps 6
 set $outer_gaps 0
 set $term --no-startup-id kitty
 set $mod Mod4
