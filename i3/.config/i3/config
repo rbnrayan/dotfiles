@@ -12,7 +12,7 @@ exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
 exec xinput set-prop "SYNA32AA:00 06CB:CE17 Touchpad" "libinput Tapping Enabled" 1
 
 default_border none
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2px
 
 # #---Basic Definitions---# #
 # smart_gaps on
