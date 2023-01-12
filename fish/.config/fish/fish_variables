@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DOCKER_HOST:unix\x3a///run/user/1000/docker\x2esock
 SETUVAR --export GITHUB_TOKEN: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
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_initialized:3400
@@ -34,13 +35,13 @@ SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrbl
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:cyan
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:555\x1eyellow
 SETUVAR fish_pager_color_prefix:cyan
 SETUVAR fish_pager_color_progress:cyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/rayan/\x2elocal/share/gem/ruby/3\x2e0\x2e0\x1e/home/rayan/\x2elocal/share/gem/ruby/3\x2e0\x2e0/bin\x1e/home/rayan/\x2ecargo/bin\x1e/home/rayan/\x2elocal/bin
+SETUVAR fish_user_paths:/home/rayan/\x2elocal/bin/PhpStorm\x2d222\x2e3739\x2e61/bin\x1e/home/rayan/\x2elocal/bin/clion/bin\x1e/home/rayan/\x2elocal/share/gem/ruby/3\x2e0\x2e0\x1e/home/rayan/\x2elocal/share/gem/ruby/3\x2e0\x2e0/bin\x1e/home/rayan/\x2ecargo/bin\x1e/home/rayan/\x2elocal/bin
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute

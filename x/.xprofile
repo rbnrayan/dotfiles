@@ -5,3 +5,5 @@ xset s noblank
 
 # Faster key repeat and delay
 xset r rate 210 40
+
+setxkbmap fr
