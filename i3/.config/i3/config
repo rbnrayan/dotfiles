@@ -28,6 +28,9 @@ set $lock i3lock
 set $suspend sudo systemctl suspend
 set $hibernate sudo -A systemctl hibernate
 
+# rofi definitions
+set $rofi_cmd rofi -theme $HOME/.config/rofi/launchers/type-1/style-6.rasi
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -83,7 +86,7 @@ bindsym $mod+u                  [urgent=latest] focus
 # bindsym $mod+i                  fullscreen disable; floating enable; resize set 300 200; sticky enable; move position 4792 53
 
 # o
-bindsym $mod+o			            exec --no-startup-id $term -e nvim ~/Repos/blog/content
+# bindsym $mod+o			            exec --no-startup-id $term -e nvim ~/Repos/blog/content
 # bindsym $mod+Shift			        exec --no-startup-id $term -e nvim ~/Repos
 
 # a
@@ -94,7 +97,7 @@ bindsym $mod+s        			    sticky toggle;
 bindsym $mod+Shift+s			      split toggle
 
 # d
-bindsym $mod+d                  exec --no-startup-id rofi -modi drun#run#window -show drun
+bindsym $mod+d                  exec --no-startup-id $rofi_cmd -show drun
 
 # f
 bindsym $mod+f			            fullscreen toggle
@@ -138,7 +141,8 @@ bindsym $mod+p			            exec --no-startup-id picom --config $HOME/.config/p
 bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 
 # v
-# bindsym $mod+v			            exec --no-startup-id mpv /dev/video0
+bindsym $mod+v			            exec --no-startup-id $HOME/.config/polybar/launch.sh
+bindsym $mod+Shift+v			      exec --no-startup-id killall polybar
 
 # b
 bindsym $mod+b			            exec --no-startup-id firefox
@@ -153,9 +157,9 @@ bindsym $mod+b			            exec --no-startup-id firefox
 
 
 # #---Workspace Bindings---# #
-# bindsym $mod+Tab		            exec --no-startup-id rofi-menu-windows
-bindsym $mod+Tab		            workspace next
-bindsym $mod+Shift+Tab		      workspace previous
+bindsym $mod+Tab		            exec --no-startup-id $rofi_cmd -show window
+#bindsym $mod+Tab		            workspace next
+#bindsym $mod+Shift+Tab		      workspace previous
 #bindsym $mod+apostrophe		    split horizontal ;; exec $term
 #bindsym $mod+slash		          split vertical ;; exec $term
 bindsym $mod+Shift+slash	      kill
@@ -173,8 +177,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Assign Workspaces:
-# assign [class="Brave"] $ws1
-# assign [class="Chromium"] $ws2
+assign [class="firefox"] $ws1
 assign [class="discord"] $ws8
 for_window [class="Steam"] move to workspace $ws7
 for_window [class="Spotify"] move to workspace $ws9
