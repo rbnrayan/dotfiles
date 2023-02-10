@@ -30,6 +30,7 @@ set $hibernate sudo -A systemctl hibernate
 
 # rofi definitions
 set $rofi_cmd rofi -theme $HOME/.config/rofi/launchers/type-1/style-6.rasi
+set $powermenu $HOME/.config/rofi/powermenu/type-3/powermenu.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -133,7 +134,7 @@ bindsym $mod+semicolon 			    exec --no-startup-id skippy-xd
 bindsym $mod+z			            exec --no-startup-id $term -e nvim ~/.zshrc
 
 # x
-bindsym $mod+x 			            exec --no-startup-id $reboot
+bindsym $mod+x 			            exec --no-startup-id $powermenu
 bindsym $mod+Shift+x		        exec --no-startup-id $shutdown
 
 # p
